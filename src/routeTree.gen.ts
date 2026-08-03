@@ -10,33 +10,297 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AkatsukiRouteImport } from './routes/akatsuki'
+import { Route as ClansRouteImport } from './routes/clans'
+import { Route as CompareRouteImport } from './routes/compare'
+import { Route as FamilyTreeRouteImport } from './routes/family-tree'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as HokageRouteImport } from './routes/hokage'
+import { Route as KekkeiGenkaiRouteImport } from './routes/kekkei-genkai'
+import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as TailedBeastsRouteImport } from './routes/tailed-beasts'
+import { Route as TeamsRouteImport } from './routes/teams'
+import { Route as TimelineRouteImport } from './routes/timeline'
+import { Route as CharactersIndexRouteImport } from './routes/characters/index'
+import { Route as CharactersSlugRouteImport } from './routes/characters/$slug'
+import { Route as JutsuIndexRouteImport } from './routes/jutsu/index'
+import { Route as JutsuSlugRouteImport } from './routes/jutsu/$slug'
+import { Route as StoryArcsIndexRouteImport } from './routes/story-arcs/index'
+import { Route as StoryArcsSlugRouteImport } from './routes/story-arcs/$slug'
+import { Route as VillagesIndexRouteImport } from './routes/villages/index'
+import { Route as VillagesSlugRouteImport } from './routes/villages/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AkatsukiRoute = AkatsukiRouteImport.update({
+  id: '/akatsuki',
+  path: '/akatsuki',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClansRoute = ClansRouteImport.update({
+  id: '/clans',
+  path: '/clans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamilyTreeRoute = FamilyTreeRouteImport.update({
+  id: '/family-tree',
+  path: '/family-tree',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HokageRoute = HokageRouteImport.update({
+  id: '/hokage',
+  path: '/hokage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KekkeiGenkaiRoute = KekkeiGenkaiRouteImport.update({
+  id: '/kekkei-genkai',
+  path: '/kekkei-genkai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TailedBeastsRoute = TailedBeastsRouteImport.update({
+  id: '/tailed-beasts',
+  path: '/tailed-beasts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamsRoute = TeamsRouteImport.update({
+  id: '/teams',
+  path: '/teams',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TimelineRoute = TimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CharactersIndexRoute = CharactersIndexRouteImport.update({
+  id: '/characters/',
+  path: '/characters/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CharactersSlugRoute = CharactersSlugRouteImport.update({
+  id: '/characters/$slug',
+  path: '/characters/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JutsuIndexRoute = JutsuIndexRouteImport.update({
+  id: '/jutsu/',
+  path: '/jutsu/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JutsuSlugRoute = JutsuSlugRouteImport.update({
+  id: '/jutsu/$slug',
+  path: '/jutsu/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryArcsIndexRoute = StoryArcsIndexRouteImport.update({
+  id: '/story-arcs/',
+  path: '/story-arcs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryArcsSlugRoute = StoryArcsSlugRouteImport.update({
+  id: '/story-arcs/$slug',
+  path: '/story-arcs/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VillagesIndexRoute = VillagesIndexRouteImport.update({
+  id: '/villages/',
+  path: '/villages/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VillagesSlugRoute = VillagesSlugRouteImport.update({
+  id: '/villages/$slug',
+  path: '/villages/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/akatsuki': typeof AkatsukiRoute
+  '/clans': typeof ClansRoute
+  '/compare': typeof CompareRoute
+  '/family-tree': typeof FamilyTreeRoute
+  '/gallery': typeof GalleryRoute
+  '/hokage': typeof HokageRoute
+  '/kekkei-genkai': typeof KekkeiGenkaiRoute
+  '/quiz': typeof QuizRoute
+  '/tailed-beasts': typeof TailedBeastsRoute
+  '/teams': typeof TeamsRoute
+  '/timeline': typeof TimelineRoute
+  '/characters/$slug': typeof CharactersSlugRoute
+  '/jutsu/$slug': typeof JutsuSlugRoute
+  '/story-arcs/$slug': typeof StoryArcsSlugRoute
+  '/villages/$slug': typeof VillagesSlugRoute
+  '/characters/': typeof CharactersIndexRoute
+  '/jutsu/': typeof JutsuIndexRoute
+  '/story-arcs/': typeof StoryArcsIndexRoute
+  '/villages/': typeof VillagesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/akatsuki': typeof AkatsukiRoute
+  '/clans': typeof ClansRoute
+  '/compare': typeof CompareRoute
+  '/family-tree': typeof FamilyTreeRoute
+  '/gallery': typeof GalleryRoute
+  '/hokage': typeof HokageRoute
+  '/kekkei-genkai': typeof KekkeiGenkaiRoute
+  '/quiz': typeof QuizRoute
+  '/tailed-beasts': typeof TailedBeastsRoute
+  '/teams': typeof TeamsRoute
+  '/timeline': typeof TimelineRoute
+  '/characters/$slug': typeof CharactersSlugRoute
+  '/jutsu/$slug': typeof JutsuSlugRoute
+  '/story-arcs/$slug': typeof StoryArcsSlugRoute
+  '/villages/$slug': typeof VillagesSlugRoute
+  '/characters': typeof CharactersIndexRoute
+  '/jutsu': typeof JutsuIndexRoute
+  '/story-arcs': typeof StoryArcsIndexRoute
+  '/villages': typeof VillagesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/akatsuki': typeof AkatsukiRoute
+  '/clans': typeof ClansRoute
+  '/compare': typeof CompareRoute
+  '/family-tree': typeof FamilyTreeRoute
+  '/gallery': typeof GalleryRoute
+  '/hokage': typeof HokageRoute
+  '/kekkei-genkai': typeof KekkeiGenkaiRoute
+  '/quiz': typeof QuizRoute
+  '/tailed-beasts': typeof TailedBeastsRoute
+  '/teams': typeof TeamsRoute
+  '/timeline': typeof TimelineRoute
+  '/characters/$slug': typeof CharactersSlugRoute
+  '/jutsu/$slug': typeof JutsuSlugRoute
+  '/story-arcs/$slug': typeof StoryArcsSlugRoute
+  '/villages/$slug': typeof VillagesSlugRoute
+  '/characters/': typeof CharactersIndexRoute
+  '/jutsu/': typeof JutsuIndexRoute
+  '/story-arcs/': typeof StoryArcsIndexRoute
+  '/villages/': typeof VillagesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/akatsuki'
+    | '/clans'
+    | '/compare'
+    | '/family-tree'
+    | '/gallery'
+    | '/hokage'
+    | '/kekkei-genkai'
+    | '/quiz'
+    | '/tailed-beasts'
+    | '/teams'
+    | '/timeline'
+    | '/characters/$slug'
+    | '/jutsu/$slug'
+    | '/story-arcs/$slug'
+    | '/villages/$slug'
+    | '/characters/'
+    | '/jutsu/'
+    | '/story-arcs/'
+    | '/villages/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/akatsuki'
+    | '/clans'
+    | '/compare'
+    | '/family-tree'
+    | '/gallery'
+    | '/hokage'
+    | '/kekkei-genkai'
+    | '/quiz'
+    | '/tailed-beasts'
+    | '/teams'
+    | '/timeline'
+    | '/characters/$slug'
+    | '/jutsu/$slug'
+    | '/story-arcs/$slug'
+    | '/villages/$slug'
+    | '/characters'
+    | '/jutsu'
+    | '/story-arcs'
+    | '/villages'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/akatsuki'
+    | '/clans'
+    | '/compare'
+    | '/family-tree'
+    | '/gallery'
+    | '/hokage'
+    | '/kekkei-genkai'
+    | '/quiz'
+    | '/tailed-beasts'
+    | '/teams'
+    | '/timeline'
+    | '/characters/$slug'
+    | '/jutsu/$slug'
+    | '/story-arcs/$slug'
+    | '/villages/$slug'
+    | '/characters/'
+    | '/jutsu/'
+    | '/story-arcs/'
+    | '/villages/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AkatsukiRoute: typeof AkatsukiRoute
+  ClansRoute: typeof ClansRoute
+  CompareRoute: typeof CompareRoute
+  FamilyTreeRoute: typeof FamilyTreeRoute
+  GalleryRoute: typeof GalleryRoute
+  HokageRoute: typeof HokageRoute
+  KekkeiGenkaiRoute: typeof KekkeiGenkaiRoute
+  QuizRoute: typeof QuizRoute
+  TailedBeastsRoute: typeof TailedBeastsRoute
+  TeamsRoute: typeof TeamsRoute
+  TimelineRoute: typeof TimelineRoute
+  CharactersSlugRoute: typeof CharactersSlugRoute
+  JutsuSlugRoute: typeof JutsuSlugRoute
+  StoryArcsSlugRoute: typeof StoryArcsSlugRoute
+  VillagesSlugRoute: typeof VillagesSlugRoute
+  CharactersIndexRoute: typeof CharactersIndexRoute
+  JutsuIndexRoute: typeof JutsuIndexRoute
+  StoryArcsIndexRoute: typeof StoryArcsIndexRoute
+  VillagesIndexRoute: typeof VillagesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +312,172 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/akatsuki': {
+      id: '/akatsuki'
+      path: '/akatsuki'
+      fullPath: '/akatsuki'
+      preLoaderRoute: typeof AkatsukiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clans': {
+      id: '/clans'
+      path: '/clans'
+      fullPath: '/clans'
+      preLoaderRoute: typeof ClansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare': {
+      id: '/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/family-tree': {
+      id: '/family-tree'
+      path: '/family-tree'
+      fullPath: '/family-tree'
+      preLoaderRoute: typeof FamilyTreeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hokage': {
+      id: '/hokage'
+      path: '/hokage'
+      fullPath: '/hokage'
+      preLoaderRoute: typeof HokageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kekkei-genkai': {
+      id: '/kekkei-genkai'
+      path: '/kekkei-genkai'
+      fullPath: '/kekkei-genkai'
+      preLoaderRoute: typeof KekkeiGenkaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tailed-beasts': {
+      id: '/tailed-beasts'
+      path: '/tailed-beasts'
+      fullPath: '/tailed-beasts'
+      preLoaderRoute: typeof TailedBeastsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teams': {
+      id: '/teams'
+      path: '/teams'
+      fullPath: '/teams'
+      preLoaderRoute: typeof TeamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/timeline': {
+      id: '/timeline'
+      path: '/timeline'
+      fullPath: '/timeline'
+      preLoaderRoute: typeof TimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/characters/': {
+      id: '/characters/'
+      path: '/characters'
+      fullPath: '/characters/'
+      preLoaderRoute: typeof CharactersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/characters/$slug': {
+      id: '/characters/$slug'
+      path: '/characters/$slug'
+      fullPath: '/characters/$slug'
+      preLoaderRoute: typeof CharactersSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jutsu/': {
+      id: '/jutsu/'
+      path: '/jutsu'
+      fullPath: '/jutsu/'
+      preLoaderRoute: typeof JutsuIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jutsu/$slug': {
+      id: '/jutsu/$slug'
+      path: '/jutsu/$slug'
+      fullPath: '/jutsu/$slug'
+      preLoaderRoute: typeof JutsuSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story-arcs/': {
+      id: '/story-arcs/'
+      path: '/story-arcs'
+      fullPath: '/story-arcs/'
+      preLoaderRoute: typeof StoryArcsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story-arcs/$slug': {
+      id: '/story-arcs/$slug'
+      path: '/story-arcs/$slug'
+      fullPath: '/story-arcs/$slug'
+      preLoaderRoute: typeof StoryArcsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/villages/': {
+      id: '/villages/'
+      path: '/villages'
+      fullPath: '/villages/'
+      preLoaderRoute: typeof VillagesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/villages/$slug': {
+      id: '/villages/$slug'
+      path: '/villages/$slug'
+      fullPath: '/villages/$slug'
+      preLoaderRoute: typeof VillagesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AkatsukiRoute: AkatsukiRoute,
+  ClansRoute: ClansRoute,
+  CompareRoute: CompareRoute,
+  FamilyTreeRoute: FamilyTreeRoute,
+  GalleryRoute: GalleryRoute,
+  HokageRoute: HokageRoute,
+  KekkeiGenkaiRoute: KekkeiGenkaiRoute,
+  QuizRoute: QuizRoute,
+  TailedBeastsRoute: TailedBeastsRoute,
+  TeamsRoute: TeamsRoute,
+  TimelineRoute: TimelineRoute,
+  CharactersSlugRoute: CharactersSlugRoute,
+  JutsuSlugRoute: JutsuSlugRoute,
+  StoryArcsSlugRoute: StoryArcsSlugRoute,
+  VillagesSlugRoute: VillagesSlugRoute,
+  CharactersIndexRoute: CharactersIndexRoute,
+  JutsuIndexRoute: JutsuIndexRoute,
+  StoryArcsIndexRoute: StoryArcsIndexRoute,
+  VillagesIndexRoute: VillagesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
